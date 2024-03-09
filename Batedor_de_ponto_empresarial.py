@@ -48,8 +48,8 @@ def verificar_existencia_do_arquivo():
         with open(arquivo,"r") as arquivo_:
             testando = arquivo_.readline()
     except FileNotFoundError:
-        with open(arquivo,"x") as arquivo_:
-            teste = arquivo_.readline()
+        with open(arquivo,"w") as arquivo_:
+            teste = arquivo_.write("\n")
 #--------------------------------------------------------------------------------
 #                       verificando atrasos
 def verificar_atraso():
