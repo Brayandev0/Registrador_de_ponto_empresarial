@@ -24,13 +24,12 @@ def verificar_cargo(cargo):
     for total in cargos:
         if cargo == total:
             return True
-    else:
-        return False
+    return False
 #--------------------------------------------------------------------------------
 #                       Mostrando Cargos
 def mostrar_cargos():
+    print("\n")
     for total in cargos:
-        print(barras,"\n")
         print(total)
 #--------------------------------------------------------------------------------
 #                       detectando o os para o clear 
@@ -74,6 +73,7 @@ def registrar_ponto():
                 exit()
             with open(arquivo, "a", encoding="utf-8") as arquivo_de_pontos:
                 arquivo_de_pontos.write("\n")
+                arquivo_de_pontos.write(" Horario Definido     : 9:00 AM \n")
                 arquivo_de_pontos.write(f" Nome do funcionario  : {nome_do_funcionario} \n ")
                 arquivo_de_pontos.write(f"Cargo do Funcionario : {Insira_seu_cargo} \n ",)
                 arquivo_de_pontos.write(f"Hora do ponto batido : {hora}:{minuto} \n ")
